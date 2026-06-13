@@ -8,3 +8,7 @@ class HomeFragment {
         println("Home fragment created")
     }
 }
+
+
+// region PromoBanner Integration
+// endregion
