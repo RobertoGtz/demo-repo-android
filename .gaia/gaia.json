@@ -8,7 +8,6 @@
     "maxFilesToTouch": 6,
     "requireTests": true,
     "targetBranch": "develop",
-
     "architecture": "mvvm_clean",
     "module": "app",
 
@@ -31,35 +30,10 @@
       "packages":   "lowercase.dot.separated"
     },
 
-    "codeRules": [
-      "Use Kotlin Coroutines + Flow for async operations — no RxJava, no AsyncTask",
-      "UI layer must use Fragments with ViewBinding — no synthetic view access or findViewById",
-      "ViewModels must extend AndroidViewModel or ViewModel — no business logic in Fragment/Activity",
-      "Use StateFlow or LiveData for UI state — emit sealed class states (Loading, Success, Error)",
-      "Dependency injection via constructor — no static getInstance() singletons",
-      "Repository pattern required: ViewModels must only call UseCases, not repositories directly",
-      "All suspend functions in repositories must be wrapped in try/catch returning Result<T>",
-      "No hardcoded strings in Kotlin files — use res/values/strings.xml",
-      "No hardcoded dimensions or colors — use res/values/dimens.xml and res/values/colors.xml"
-    ],
-
-    "testRules": [
-      "Every new ViewModel must have JUnit tests in app/src/test/",
-      "Every new UseCase must have unit tests covering all branches",
-      "Test file naming: {ClassName}Test.kt",
-      "Use JUnit 4 or JUnit 5 — no third-party test runners",
-      "Use MockK for mocking — no manual fakes unless the class is trivial",
-      "Use kotlinx-coroutines-test for coroutine testing (runTest, TestDispatcher)",
-      "Tests must cover: loading state, success state, and error/exception state",
-      "UI tests (if required) go in app/src/androidTest/ using Espresso"
-    ],
-
     "forbidden": [
-      "app/src/main/kotlin/com/demo/app/MainActivity.kt — do not modify the Activity",
-      "app/build.gradle.kts — do not add dependencies without explicit task",
-      "build.gradle.kts (root) — do not modify root build file",
-      "Do not introduce Hilt or Dagger unless the feature spec explicitly requires it",
-      "Do not use Java — all new files must be Kotlin"
+      "app/src/main/kotlin/com/demo/app/MainActivity.kt",
+      "app/build.gradle.kts",
+      "build.gradle.kts"
     ]
   }
 }
