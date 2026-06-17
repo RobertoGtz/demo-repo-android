@@ -1,8 +1,14 @@
 {
   "name": "demo-repo-android",
   "platform": "android",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Gaia plugin config for the Android/Kotlin demo repo",
+
+  "agents": {
+    "specAuthor":  "android-spec-author.ts",
+    "implementer": "android-implementer.ts",
+    "reviewer":    "android-reviewer.ts"
+  },
 
   "config": {
     "maxFilesToTouch": 6,
