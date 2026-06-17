@@ -1,0 +1,39 @@
+{
+  "name": "demo-repo-android",
+  "platform": "android",
+  "version": "1.0.0",
+  "description": "Gaia plugin config for the Android/Kotlin demo repo",
+
+  "config": {
+    "maxFilesToTouch": 6,
+    "requireTests": true,
+    "targetBranch": "develop",
+    "architecture": "mvvm_clean",
+    "module": "app",
+
+    "patterns": {
+      "fragment":   "app/src/main/kotlin/com/demo/app/presentation/screens/{Name}Fragment.kt",
+      "viewModel":  "app/src/main/kotlin/com/demo/app/presentation/viewmodels/{Name}ViewModel.kt",
+      "layout":     "app/src/main/res/layout/fragment_{name}.xml",
+      "model":      "app/src/main/kotlin/com/demo/app/domain/models/{Name}.kt",
+      "useCase":    "app/src/main/kotlin/com/demo/app/domain/usecases/{Name}UseCase.kt",
+      "repository": "app/src/main/kotlin/com/demo/app/data/repositories/{Name}Repository.kt",
+      "dataSource": "app/src/main/kotlin/com/demo/app/data/datasources/{Name}DataSource.kt",
+      "test":       "app/src/test/kotlin/com/demo/app/{feature}/{Name}Test.kt"
+    },
+
+    "naming": {
+      "classes":    "PascalCase",
+      "files":      "PascalCase",
+      "variables":  "camelCase",
+      "constants":  "SCREAMING_SNAKE_CASE in companion object",
+      "packages":   "lowercase.dot.separated"
+    },
+
+    "forbidden": [
+      "app/src/main/kotlin/com/demo/app/MainActivity.kt",
+      "app/build.gradle.kts",
+      "build.gradle.kts"
+    ]
+  }
+}
